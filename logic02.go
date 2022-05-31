@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	Logic02Soal06(9)
+	Logic02Soal10(9)
 }
 func Logic02Soal01(n int) {
 	a := 3
@@ -111,5 +111,83 @@ func Logic02Soal06(n int) {
 		}
 		//ini untuk pindah baris
 		fmt.Println("\n")
+	}
+}
+
+func Logic02Soal07(n int) {
+	//ini variable a nilainya 3
+	a := 3
+	//looping baris
+	for i := 0; i < n; i++ {
+		//looping kolom
+		for j := 0; j < n; j++ {
+			if i < j {
+				fmt.Print(" ", "\t")
+			} else {
+				//ini menampilkan kolom
+				fmt.Print(a, "\t")
+			}
+		}
+		//kolom selesai
+		//kemudian pindah ke baris selanjutnya
+		fmt.Print("\n")
+		//saat pindah baris variable a ditambah 3
+		a += 3
+	}
+}
+
+func Logic02Soal08(n int) {
+	a := 3
+
+	//looping baris
+	for i := 0; i < n; i++ {
+		//looping kolom
+		for j := 0; j < n; j++ {
+			//membuat kondisi untuk yang kotak kosong
+			if i > j {
+				fmt.Print(" ", "\t")
+			} else {
+				fmt.Print(a, "\t")
+			}
+		}
+		//kolom selesai
+		//pindah ke baris selanjutnya
+		fmt.Print("\n")
+		//nilai variabel a ditambah 3
+		a += 3
+	}
+}
+
+func Logic02Soal09(n int) {
+	for i := 0; i < n; i++ {
+		a := 0
+		for j := 0; j < n; j++ {
+			a += 3
+			if i+j == n-1 {
+				fmt.Print(a, "\t")
+			} else if i+j <= n-1 {
+				fmt.Print(" ", "\t")
+			} else {
+				fmt.Print(a, "\t")
+			}
+		}
+		fmt.Print("\n")
+	}
+}
+
+func Logic02Soal10(n int) {
+	for i := 0; i < n; i++ {
+		a := 0
+		for j := 0; j < n; j++ {
+			a += 3
+			if i+j == n-1 {
+				fmt.Print(a, "\t")
+			} else if i+j <= n-1 {
+				fmt.Print(a, "\t")
+			} else {
+				fmt.Print(" ", "\t")
+			}
+		}
+		fmt.Print("\n")
 	}
 }
