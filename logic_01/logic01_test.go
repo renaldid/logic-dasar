@@ -1,4 +1,4 @@
-package main
+package logic_01
 
 import (
 	"fmt"

@@ -1,10 +1,7 @@
-package main
+package logic_02
 
 import "fmt"
 
-func main() {
-	Logic02Soal10(9)
-}
 func Logic02Soal01(n int) {
 	a := 3
 
@@ -52,7 +49,7 @@ func Logic02Soal03(n int) {
 }
 
 func Logic02Soal04(n int) {
-	a := 27
+	a := n * 3
 
 	//looping baris
 	for i := 0; i < n; i++ {
@@ -83,10 +80,10 @@ func Logic02Soal05(n int) {
 		fmt.Println("\n")
 		if i < tengah {
 			a += 3
-			fmt.Print(a, "\t")
+
 		} else {
 			a -= 3
-			fmt.Print(a, "\t")
+
 		}
 	}
 }
